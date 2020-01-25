@@ -28,7 +28,7 @@ Voici la définition de Wikipedia : <br />
 L'en-tête X-Forwarded-For (XFF) est un en-tête standard pour identifier l'adresse IP d'origine d'un client se connectant à un serveur Web via un proxy HTTP<br /><br />
 Bon, place à la commande que j'ai utilisé (via cURL) : 
 `curl -H "X-Forwarded-For: <script>alert(1);<script>" monip.org`<br />
-<img src="https://i.imgur.com/mJN6rhg.png"/>
+<img src="https://i.imgur.com/mJN6rhg.png"/><br />
 Le résultat de l'entête X-Forwarded-For est reflected (et interprété) sur le site monip.org, vous pouvez donc y injecter du code.
 ### Comment fixer la faille XSS ? 😇
 Il y'a plusieurs moyen mais la meilleure façon selon moi reste htmlspecialchars ! 
