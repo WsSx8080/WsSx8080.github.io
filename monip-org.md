@@ -7,7 +7,7 @@
 Une XSS (Cross Site Scripting) est une faille permettant l'injection de code (JS/HTML/CSS).
 ### Un exemple s'impose
 `coucou.php`
-```diff
+```php
 <?php 
 $name = $_GET["name"];
 echo "Coucou ".$name;
@@ -32,7 +32,7 @@ Bon, place à la commande que j'ai utilisé (via cURL) :
 Le résultat de l'entête X-Forwarded-For est reflected (et interprété) sur le site monip.org, vous pouvez donc y injecter du code.
 ### Comment fixer la faille XSS ? 😇
 Il y'a plusieurs moyen mais la meilleure façon selon moi reste htmlspecialchars ! 
-```diff 
+```php
 <?php
 $name = htmlspecialchars($_GET["name"], ENT_QUOTES);
 echo "Coucou ".$name;
