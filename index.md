@@ -11,5 +11,5 @@ Aucune idée, enfaite, nous sommes deux et le pseudo nous plaisait bien, à la b
 * <a href="https://wssx8080.github.io/HTB-Freelancer">Writeup HTB-Freelancer</a><br>
 * <a href="https://wssx8080.github.io/HTB-Cartographer">Writeup HTB-Cartographer</a>
 
-<br /><br /><br />
+<br /><br />
 ## Le blog a été conçu par <a href="https://github.com/http-x-forwarded-for">HXFF</a> et <a href="https://github.com/Aaaaalpha">Alpha</a>
